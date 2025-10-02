@@ -95,5 +95,5 @@ temp_*
 *.log
 logs/
 
-
-*.txt
+# Cache
+.cache/

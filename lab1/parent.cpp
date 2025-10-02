@@ -47,21 +47,9 @@ int main() {
         close(pipe1[0]);
         close(pipe2[0]); close(pipe2[1]);
 
-        // FILE* fout = fopen(file1.c_str(), "wb");
-        // if (!fout) {perror("fopen"); return -1;}
-
-        // std::string line;
-        // while(std::getline(std::cin, line)) {
-        //     std::string result = remove_vowels(line);
-        //     fwrite(result.c_str(), sizeof(char), result.size(), fout);
-        //     fwrite("\n", sizeof(char), 1, fout);
-        //     std::cout << "[child 1] " << result << std::endl;
-        // }
-
         execl("./child_exe", "./child", file1.c_str(), NULL);
         perror("execl error");
 
-        // fclose(fout);
         exit(1);
     }
 
@@ -75,21 +63,9 @@ int main() {
         close(pipe2[0]);
         close(pipe1[0]); close(pipe1[1]);
 
-        // FILE* fout = fopen(file2.c_str(), "wb");
-        // if (!fout) {perror("fopen"); return -1;}
-
-        // std::string line;
-        // while(std::getline(std::cin, line)) {
-        //     std::string result = remove_vowels(line);
-        //     fwrite(result.c_str(), sizeof(char), result.size(), fout);
-        //     fwrite("\n", sizeof(char), 1, fout);
-        //     std::cout << "[child 2] " << result << std::endl;
-        // }
-
         execl("./child_exe", "./child", file2.c_str(), NULL);
         perror("execl error");
 
-        // fclose(fout);
         exit(1);
     }
     // Тут уже родитель
