@@ -1,0 +1,99 @@
+# Compiled binaries
+*.exe
+*.out
+*.app
+*.bin
+main
+a.out
+
+# Object files
+*.o
+*.obj
+*.ko
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Static analysis
+*.sarif
+
+# CMake
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+
+# Build directories
+build/
+Build/
+debug/
+Debug/
+release/
+Release/
+bin/
+obj/
+
+# VS Code
+.vscode/
+
+# IDE files
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Core dumps
+core
+core.*
+vgcore.*
+
+# Valgrind output
+*.valgrind
+valgrind-out.txt
+
+# GDB history
+.gdb_history
+
+# Process/thread related temp files
+*.pid
+*.lock
+*.tmp
+temp_*
+
+# Log files
+*.log
+logs/
+
+
+*.txt
