@@ -9,20 +9,6 @@
 
 int create_process();
 
-const std::string vowels = "aeiouyAEIOUY";
-
-bool is_vowel(char c) {
-    return vowels.find(c) != std::string::npos;
-}
-
-std::string remove_vowels(const std::string& s) {
-    std::string result;
-    for (char c : s) {
-        if (!is_vowel(c)) result += c;
-    }
-    return result;
-}
-
 int main() {
 
     int pipe1[2], pipe2[2]; // 0 - чтение, 1 - запись
@@ -38,7 +24,7 @@ int main() {
     std::getline(std::cin, file2);
 
     pid_t pid_1 = create_process();    
-    if (0 == pid_1) { // это дочерний процесс
+    if (0 == pid_1) {
         close(pipe1[1]);
         if (-1 == dup2(pipe1[0], STDIN_FILENO)) {
             perror("dup2 error");
@@ -54,7 +40,7 @@ int main() {
     }
 
     pid_t pid_2 = create_process();
-    if (0 == pid_2) { // это дочерний процесс
+    if (0 == pid_2) {
         close(pipe2[1]);
         if (-1 == dup2(pipe2[0], STDIN_FILENO)) {
             perror("dup2 error");
