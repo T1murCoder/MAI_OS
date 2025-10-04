@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <fcntl.h>
 #include <stdlib.h>
 #include <iostream>
 #include <unistd.h>
@@ -23,6 +24,10 @@ int main() {
     std::cout << "Введите имя файла file2: ";
     std::getline(std::cin, file2);
 
+    int fd1 = open(file1.c_str(), O_WRONLY | O_CREAT);
+    int fd2 = open(file2.c_str(), O_WRONLY | O_CREAT);
+
+
     pid_t pid_1 = create_process();    
     if (0 == pid_1) {
         close(pipe1[1]);
@@ -33,7 +38,7 @@ int main() {
         close(pipe1[0]);
         close(pipe2[0]); close(pipe2[1]);
 
-        execl("./child_exe", "./child", file1.c_str(), NULL);
+        execl("./child_exe", "./child", std::to_string(fd1).c_str(), NULL);
         perror("execl error");
 
         exit(1);
@@ -49,7 +54,7 @@ int main() {
         close(pipe2[0]);
         close(pipe1[0]); close(pipe1[1]);
 
-        execl("./child_exe", "./child", file2.c_str(), NULL);
+        execl("./child_exe", "./child", std::to_string(fd2).c_str(), NULL);
         perror("execl error");
 
         exit(1);
@@ -75,6 +80,9 @@ int main() {
 
     waitpid(pid_1, nullptr, 0);
     waitpid(pid_2, nullptr, 0);
+
+    close(fd1);
+    close(fd2);
     
     return 0;
 }

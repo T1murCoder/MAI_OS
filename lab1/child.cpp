@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cstdio>
+#include <unistd.h>
 
 const std::string vowels = "aeiouyAEIOUY";
 
@@ -22,22 +23,20 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    const char* file_name = argv[1];
-
-    FILE* fout = fopen(file_name, "wb");
-    if (!fout) {
-        perror("fopen error");
-        return 1;
-    }
+    int fd = std::stoi(argv[1]);
+    if (-1 == dup2(fd, STDOUT_FILENO)) {
+            perror("dup2 error");
+            exit(-1);
+        };
+    close(fd);
 
     std::string line;
     while (std::getline(std::cin, line)) {
         std::string result = remove_vowels(line);
-        fwrite(result.c_str(), sizeof(char), result.size(), fout);
-        fwrite("\n", sizeof(char), 1, fout);
-        std::cout << "[child " << file_name << "] " << result << std::endl;
+
+        printf("[child %d] %s\n", fd, result.c_str());
+        fflush(stdout);
     }
 
-    fclose(fout);
     return 0;
 }

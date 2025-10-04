@@ -92,7 +92,7 @@ valgrind-out.txt
 temp_*
 
 # Log files
-*.log
+# *.log
 logs/
 
 # Cache
