@@ -14,8 +14,5 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror=maybe-uninitialized")
 find_package(Threads REQUIRED)
 
 
-# add_library(${LAB_NAME}_lib src/day.cpp src/fear_check.cpp)
-add_executable(main_exe src/thread_pool.cpp main.cpp)
+add_executable(main_exe src/thread_pool.cpp src/gaussian.cpp main.cpp)
 target_link_libraries(main_exe PRIVATE Threads::Threads)
-
-# target_link_libraries(${LAB_NAME}_exe PRIVATE ${LAB_NAME}_lib)
