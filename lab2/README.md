@@ -27,7 +27,9 @@ break ThreadPool:worker
 ### Посмотреть количество потоков
 
 `./main_exe < ../inputdata2500.txt &`
+
 `ps aux | grep main_exe`
+
 `cat /proc/<PID>/status | grep Threads`
 
 ---
