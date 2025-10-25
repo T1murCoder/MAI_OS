@@ -18,8 +18,17 @@ break ThreadPool:worker
 
 `tui enable`
 
-### Run Benchmark
-`g++ -std=c++11 -pthread -O2 -Iinclude benchmark.cpp src/gaussian.cpp src/thread_pool.cpp -o benchmark`
+### Build Benchmark
+`g++ -std=c++11 -pthread -O2 -Iinclude benchmark.cpp ../src/gaussian.cpp ../src/thread_pool.cpp -o benchmark`
+
+### Build Matrix Generator
+`g++ -std=c++11 -o generate_matrix generate_matrix.cpp`
+
+### Посмотреть количество потоков
+
+`./main_exe < ../inputdata2500.txt &`
+`ps aux | grep main_exe`
+`cat /proc/<PID>/status | grep Threads`
 
 ---
 

@@ -61,7 +61,7 @@ double* gauss(double** a, double* y, int n, size_t num_threads) {
     double *x;
     int k = 0;
     x = new double[n];
-    ThreadPool pool(num_threads);
+    ThreadPool pool(num_threads - 1);
 
     while (k < n) {
         FindMaxCoefResult res = find_max_coef_row_idx(a, n, k);
