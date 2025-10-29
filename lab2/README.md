@@ -44,9 +44,9 @@ break ThreadPool:worker
 ![Amdahl Theory](assets/gauss_theory_amdahl.png)
 
 Формула:
-$$
-S_p = \frac{1}{\alpha+\frac{(1-\alpha)}{p}}
-$$
+
+$S_p = \frac{1}{\alpha+\frac{(1-\alpha)}{p}}$
+
 где $(1-\alpha)$ - доля параллельного кода, $p$ - количество потоков
 
 
@@ -54,9 +54,9 @@ $$
 ![Efficiency Theory](assets/gauss_theory_efficiency.png)
 
 Формула:
-$$
-E_p = \frac{S_p}{p}
-$$
+
+$E_p = \frac{S_p}{p}$
+
 где $p$ - количество потоков
 
 Как видим на графике, теоретическое оптимальное количество потоков - это 8. Большее количество
