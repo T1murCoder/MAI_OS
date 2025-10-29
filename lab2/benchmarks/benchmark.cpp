@@ -46,9 +46,9 @@ void copy_system(double** dest_a, double* dest_y, double** src_a, double* src_y,
 }
 
 int main() {
-    const int n = 10000; // Размер матрицы
-    const int num_runs = 2; // Количество прогонов для усреднения
-    int thread_counts[] = {1, 2, 3, 4, 6, 8, 12, 16};
+    const int n = 500; // Размер матрицы
+    const int num_runs = 1; // Количество прогонов для усреднения
+    int thread_counts[] = {1, 2, 3, 4, 6};
     
     std::cout << "╔════════════════════════════════════════════════════════╗\n";
     std::cout << "║   БЕНЧМАРК МЕТОДА ГАУССА С THREAD POOL                 ║\n";
@@ -102,7 +102,7 @@ int main() {
             auto start = std::chrono::high_resolution_clock::now();
             
             // Передаем количество потоков в функцию
-            double* x = gauss(a, y, n, num_threads);
+            double* x = gauss(a, y, n, num_threads + 1);
             
             auto end = std::chrono::high_resolution_clock::now();
             

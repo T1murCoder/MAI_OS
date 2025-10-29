@@ -7,7 +7,7 @@ threads = []
 times = []
 
 try:
-    with open('data/benchmark_results_10000.txt', 'r') as f:
+    with open('data/benchmark_results2500.txt', 'r') as f:
         for line in f:
             if line.startswith('#'):
                 continue

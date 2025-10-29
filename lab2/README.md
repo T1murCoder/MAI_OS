@@ -5,7 +5,7 @@
 Реализовать параллельный алгоритм решения системы линейных алгебраических уравнений (СЛАУ) методом Гаусса с использованием многопоточности. Провести анализ производительности и сравнить с теоретическим законом Амдала.
 
 ### Debug
-`g++ -std=c++11 -pthread -g -O0 main.cpp src/thread_pool.cpp -Iinclude -o gauss_debug`
+`g++ -std=c++11 -pthread -g -O0 main.cpp src/worker_pool.cpp -Iinclude -o gauss_debug`
 `gdb ./gauss_debug`
 ```
 break main
@@ -19,7 +19,7 @@ break ThreadPool:worker
 `tui enable`
 
 ### Build Benchmark
-`g++ -std=c++11 -pthread -O2 -Iinclude benchmark.cpp ../src/gaussian.cpp ../src/thread_pool.cpp -o benchmark`
+`g++ -std=c++11 -pthread -O2 -Iinclude benchmark.cpp ../src/gaussian.cpp ../src/worker_pool.cpp -o benchmark`
 
 ### Build Matrix Generator
 `g++ -std=c++11 -o generate_matrix generate_matrix.cpp`
@@ -62,6 +62,23 @@ $E_p = \frac{S_p}{p}$
 Как видим на графике, теоретическое оптимальное количество потоков - это 8. Большее количество
 
 Далее проверим это на практике.
+
+### Графики бенчмарков для матриц 1000 на 1000 и 2500 на 2500
+
+<details>
+<summary>1000 на 1000</summary>
+<img src="assets/benchmark_amdahl_1000.png">
+<img src="assets/benchmark_time_1000.png">
+</details>
+
+
+<details>
+<summary>2500 на 2500</summary>
+<img src="assets/benchmark_amdahl_2500.png">
+<img src="assets/benchmark_time_2500.png">
+</details>
+
+Видно, что на этом объёме данных не так явно видны преимущества многопоточки
 
 ### График бенчмарка для матрицы 10000 на 10000
 ![Benchmark 10k*10k](assets/benchmark_amdahl_10000.png)
