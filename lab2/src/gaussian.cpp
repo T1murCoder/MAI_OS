@@ -1,5 +1,5 @@
 #include "../include/gaussian.h"
-#include "../include/thread_pool.h"
+#include "../include/worker_pool.h"
 #include <iostream>
 #include <algorithm>
 #include <cmath>
@@ -61,7 +61,7 @@ double* gauss(double** a, double* y, int n, size_t num_threads) {
     double *x;
     int k = 0;
     x = new double[n];
-    ThreadPool pool(num_threads - 1);
+    WorkerPool pool(num_threads - 1);
 
     while (k < n) {
         FindMaxCoefResult res = find_max_coef_row_idx(a, n, k);

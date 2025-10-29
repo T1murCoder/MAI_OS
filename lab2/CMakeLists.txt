@@ -14,5 +14,5 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror=maybe-uninitialized")
 find_package(Threads REQUIRED)
 
 
-add_executable(main_exe src/thread_pool.cpp src/gaussian.cpp main.cpp)
+add_executable(main_exe src/worker_pool.cpp src/gaussian.cpp main.cpp)
 target_link_libraries(main_exe PRIVATE Threads::Threads)

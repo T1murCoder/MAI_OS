@@ -1,6 +1,6 @@
-#include "../include/thread_pool.h"
+#include "../include/worker_pool.h"
 
-ThreadPool::ThreadPool(size_t num_threads) : stop_(false), active_tasks_(0) {
+WorkerPool::WorkerPool(size_t num_threads) : stop_(false), active_tasks_(0) {
         
     pthread_mutex_init(&mutex_, nullptr);
     pthread_cond_init(&cond_, nullptr);
@@ -12,7 +12,7 @@ ThreadPool::ThreadPool(size_t num_threads) : stop_(false), active_tasks_(0) {
     }
 }
 
-ThreadPool::~ThreadPool() {
+WorkerPool::~WorkerPool() {
     pthread_mutex_lock(&mutex_);
     stop_ = true;
     pthread_mutex_unlock(&mutex_);
@@ -28,14 +28,14 @@ ThreadPool::~ThreadPool() {
     pthread_cond_destroy(&finished_cond_);
 }
 
-void ThreadPool::enqueue(void (*func)(void*), void* arg) {
+void WorkerPool::enqueue(void (*func)(void*), void* arg) {
     pthread_mutex_lock(&mutex_);
     tasks_.push({func, arg});
     pthread_mutex_unlock(&mutex_);
     pthread_cond_signal(&cond_);
 }
 
-void ThreadPool::wait() {
+void WorkerPool::wait() {
     pthread_mutex_lock(&mutex_);
     while (!tasks_.empty() || active_tasks_ > 0) {
         pthread_cond_wait(&finished_cond_, &mutex_);
@@ -44,12 +44,12 @@ void ThreadPool::wait() {
     pthread_mutex_unlock(&mutex_);
 }
 
-void* ThreadPool::worker_wrapper(void* arg) {
-    static_cast<ThreadPool*>(arg)->worker();
+void* WorkerPool::worker_wrapper(void* arg) {
+    static_cast<WorkerPool*>(arg)->worker();
     return nullptr;
 }
 
-void ThreadPool::worker() {
+void WorkerPool::worker() {
 
     while (true) {
         pthread_mutex_lock(&mutex_); // залочили, чтобы к очереди не было одновременного доступа

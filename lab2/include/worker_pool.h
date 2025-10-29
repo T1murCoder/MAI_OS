@@ -9,10 +9,10 @@ struct Task {
     void* arg;
 };
 
-class ThreadPool {
+class WorkerPool {
 public:
-    explicit ThreadPool(size_t num_threads);
-    ~ThreadPool();
+    explicit WorkerPool(size_t num_threads);
+    ~WorkerPool();
     
     void enqueue(void (*func)(void*), void* arg);
     void wait();
