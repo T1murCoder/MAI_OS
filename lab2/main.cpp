@@ -70,9 +70,20 @@ int main(int argc, char* argv[]) {
     }
 
     // sysout(a, y, n);
+    try {
     x = gauss(a, y, n, num_threads);
     for (int i = 0; i < n; i++) {
         std::cout << "x[" << i << "]=" << x[i] << std::endl;
+    }
+    } catch (const std::exception& e) {
+        std::cerr << "Фатальная ошибка при решении СЛАУ: " << e.what() << std::endl;
+
+        for (int i = 0; i < n; i++) { delete[] a[i];}
+        delete[] a;
+        delete[] y;
+        delete[] x;
+
+        return EXIT_FAILURE;
     }
 
     for (int i = 0; i < n; i++) { delete[] a[i];}

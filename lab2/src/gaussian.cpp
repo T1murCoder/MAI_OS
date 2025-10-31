@@ -58,8 +58,9 @@ void subtract_from_task(void* arg) {
 }
 
 double* gauss(double** a, double* y, int n, size_t num_threads) {
-    double *x;
+    double *x = nullptr;
     int k = 0;
+    try {
     x = new double[n];
     WorkerPool pool(num_threads - 1);
 
@@ -108,4 +109,9 @@ double* gauss(double** a, double* y, int n, size_t num_threads) {
         }
     }
     return x;
+    } catch (const std::exception& e) {
+        // Очистка и проброс исключения дальше
+        delete[] x;
+        throw;
+    }
 }

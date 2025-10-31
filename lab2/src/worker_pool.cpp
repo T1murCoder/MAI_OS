@@ -1,14 +1,23 @@
 #include "../include/worker_pool.h"
+#include <stdexcept>
+#include <string>
 
 WorkerPool::WorkerPool(size_t num_threads) : stop_(false), active_tasks_(0) {
         
-    pthread_mutex_init(&mutex_, nullptr);
-    pthread_cond_init(&cond_, nullptr);
-    pthread_cond_init(&finished_cond_, nullptr);
+    if (pthread_mutex_init(&mutex_, nullptr) != 0) {
+        throw std::runtime_error(std::string("pthread_mutex_init failed"));
+    };
+    if (pthread_cond_init(&cond_, nullptr) != 0) {
+        throw std::runtime_error(std::string("pthread_cond_init failed"));
+    };
+    if (pthread_cond_init(&finished_cond_, nullptr) != 0) {
+        throw std::runtime_error(std::string("pthread_cond_init failed"));
+    };
 
     threads_.resize(num_threads);
     for (size_t i = 0; i < num_threads; ++i) {
-        pthread_create(&threads_[i], nullptr, worker_wrapper, this);
+        int err = pthread_create(&threads_[i], nullptr, worker_wrapper, this);
+        if (err != 0) throw std::runtime_error(std::string("pthread_create failed"));
     }
 }
 
