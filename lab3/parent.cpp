@@ -19,7 +19,7 @@ int main() {
 
     std::string file1, file2;
     std::cout << "Введите имя файла file1: ";
-    std::getline(std::cin, file1); // сделать обработку ошибок???
+    std::getline(std::cin, file1);
     std::cout << "Введите имя файла file2: ";
     std::getline(std::cin, file2);
 
