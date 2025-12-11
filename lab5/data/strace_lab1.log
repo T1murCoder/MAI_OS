@@ -1,0 +1,429 @@
+20860 execve("./parent_exe", ["./parent_exe"], 0x7ffd8ce23a18 /* 29 vars */) = 0
+20860 brk(NULL)                         = 0x15801000
+20860 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f066904d000
+20860 access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+20860 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+20860 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=33091, ...}, AT_EMPTY_PATH) = 0
+20860 mmap(NULL, 33091, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f0669044000
+20860 close(3)                          = 0
+20860 openat(AT_FDCWD, "/usr/local/lib64/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = 3
+20860 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+20860 newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2530008, ...}, AT_EMPTY_PATH) = 0
+20860 mmap(NULL, 2543808, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f0668c00000
+20860 mmap(0x7f0668ca5000, 1216512, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xa5000) = 0x7f0668ca5000
+20860 mmap(0x7f0668dce000, 581632, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1ce000) = 0x7f0668dce000
+20860 mmap(0x7f0668e5c000, 57344, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x25c000) = 0x7f0668e5c000
+20860 mmap(0x7f0668e6a000, 12480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f0668e6a000
+20860 close(3)                          = 0
+20860 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+20860 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+20860 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=911904, ...}, AT_EMPTY_PATH) = 0
+20860 mmap(NULL, 913680, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f0668f64000
+20860 mmap(0x7f0668f74000, 475136, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x10000) = 0x7f0668f74000
+20860 mmap(0x7f0668fe8000, 368640, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x84000) = 0x7f0668fe8000
+20860 mmap(0x7f0669042000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xdd000) = 0x7f0669042000
+20860 close(3)                          = 0
+20860 openat(AT_FDCWD, "/usr/local/lib64/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+20860 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+20860 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=906528, ...}, AT_EMPTY_PATH) = 0
+20860 mmap(NULL, 181160, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f0668f37000
+20860 mmap(0x7f0668f3b000, 143360, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7f0668f3b000
+20860 mmap(0x7f0668f5e000, 16384, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x27000) = 0x7f0668f5e000
+20860 mmap(0x7f0668f62000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2b000) = 0x7f0668f62000
+20860 close(3)                          = 0
+20860 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+20860 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\20t\2\0\0\0\0\0"..., 832) = 832
+20860 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+20860 newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=1926232, ...}, AT_EMPTY_PATH) = 0
+20860 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+20860 mmap(NULL, 1974096, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f0668a1e000
+20860 mmap(0x7f0668a44000, 1400832, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x26000) = 0x7f0668a44000
+20860 mmap(0x7f0668b9a000, 339968, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x17c000) = 0x7f0668b9a000
+20860 mmap(0x7f0668bed000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1cf000) = 0x7f0668bed000
+20860 mmap(0x7f0668bf3000, 53072, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f0668bf3000
+20860 close(3)                          = 0
+20860 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f0668f35000
+20860 arch_prctl(ARCH_SET_FS, 0x7f0668f36480) = 0
+20860 set_tid_address(0x7f0668f36750)   = 20860
+20860 set_robust_list(0x7f0668f36760, 24) = 0
+20860 rseq(0x7f0668f36da0, 0x20, 0, 0x53053053) = 0
+20860 mprotect(0x7f0668bed000, 16384, PROT_READ) = 0
+20860 mprotect(0x7f0668f62000, 4096, PROT_READ) = 0
+20860 mprotect(0x7f0669042000, 4096, PROT_READ) = 0
+20860 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f0668f33000
+20860 mprotect(0x7f0668e5c000, 45056, PROT_READ) = 0
+20860 mprotect(0x405000, 4096, PROT_READ) = 0
+20860 mprotect(0x7f0669086000, 8192, PROT_READ) = 0
+20860 prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+20860 munmap(0x7f0669044000, 33091)     = 0
+20860 futex(0x7f0668e6a73c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+20860 getrandom("\x30\xe4\xb3\x42\xba\x28\x4e\xc7", 8, GRND_NONBLOCK) = 8
+20860 brk(NULL)                         = 0x15801000
+20860 brk(0x15822000)                   = 0x15822000
+20860 pipe2([3, 4], 0)                  = 0
+20860 pipe2([5, 6], 0)                  = 0
+20860 newfstatat(1, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}, AT_EMPTY_PATH) = 0
+20860 write(1, "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\270\320\274\321\217 \321\204\320\260\320\271\320\273\320\260"..., 40) = 40
+20860 newfstatat(0, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}, AT_EMPTY_PATH) = 0
+20860 read(0, "1\n", 1024)              = 2
+20860 write(1, "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\270\320\274\321\217 \321\204\320\260\320\271\320\273\320\260"..., 40) = 40
+20860 read(0, "2\n", 1024)              = 2
+20860 openat(AT_FDCWD, "1", O_WRONLY|O_CREAT, 033302) = 7
+20860 openat(AT_FDCWD, "2", O_WRONLY|O_CREAT, 000) = 8
+20860 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f0668f36750) = 20891
+20860 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+20891 set_robust_list(0x7f0668f36760, 24 <unfinished ...>
+20860 <... clone resumed>, child_tidptr=0x7f0668f36750) = 20892
+20891 <... set_robust_list resumed>)    = 0
+20860 close(3 <unfinished ...>
+20892 set_robust_list(0x7f0668f36760, 24 <unfinished ...>
+20860 <... close resumed>)              = 0
+20891 close(4 <unfinished ...>
+20860 close(5 <unfinished ...>
+20892 <... set_robust_list resumed>)    = 0
+20860 <... close resumed>)              = 0
+20891 <... close resumed>)              = 0
+20860 write(1, "\320\222\320\262\320\276\320\264\320\270\321\202\320\265 \321\201\321\202\321\200\320\276\320\272\320\270 \320\235\320\220"..., 101 <unfinished ...>
+20892 close(6 <unfinished ...>
+20860 <... write resumed>)              = 101
+20891 dup2(3, 0 <unfinished ...>
+20860 read(0,  <unfinished ...>
+20892 <... close resumed>)              = 0
+20891 <... dup2 resumed>)               = 0
+20892 dup2(5, 0 <unfinished ...>
+20891 close(3 <unfinished ...>
+20892 <... dup2 resumed>)               = 0
+20891 <... close resumed>)              = 0
+20892 close(5 <unfinished ...>
+20891 close(5 <unfinished ...>
+20892 <... close resumed>)              = 0
+20891 <... close resumed>)              = 0
+20892 close(3 <unfinished ...>
+20891 close(6 <unfinished ...>
+20892 <... close resumed>)              = 0
+20891 <... close resumed>)              = 0
+20892 close(4 <unfinished ...>
+20891 execve("./child_exe", ["./child", "7"], 0x7fff0d3efc78 /* 29 vars */ <unfinished ...>
+20892 <... close resumed>)              = 0
+20892 execve("./child_exe", ["./child", "8"], 0x7fff0d3efc78 /* 29 vars */ <unfinished ...>
+20891 <... execve resumed>)             = 0
+20892 <... execve resumed>)             = 0
+20891 brk(NULL <unfinished ...>
+20892 brk(NULL <unfinished ...>
+20891 <... brk resumed>)                = 0x1e51e000
+20892 <... brk resumed>)                = 0x12d86000
+20891 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+20892 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+20891 <... mmap resumed>)               = 0x7efe38a29000
+20891 access("/etc/ld.so.preload", R_OK <unfinished ...>
+20892 <... mmap resumed>)               = 0x7f50696db000
+20891 <... access resumed>)             = -1 ENOENT (No such file or directory)
+20892 access("/etc/ld.so.preload", R_OK <unfinished ...>
+20891 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+20892 <... access resumed>)             = -1 ENOENT (No such file or directory)
+20891 <... openat resumed>)             = 3
+20892 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+20891 newfstatat(3, "",  <unfinished ...>
+20892 <... openat resumed>)             = 3
+20891 <... newfstatat resumed>{st_mode=S_IFREG|0644, st_size=33091, ...}, AT_EMPTY_PATH) = 0
+20892 newfstatat(3, "",  <unfinished ...>
+20891 mmap(NULL, 33091, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+20892 <... newfstatat resumed>{st_mode=S_IFREG|0644, st_size=33091, ...}, AT_EMPTY_PATH) = 0
+20891 <... mmap resumed>)               = 0x7efe38a20000
+20892 mmap(NULL, 33091, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+20891 close(3 <unfinished ...>
+20892 <... mmap resumed>)               = 0x7f50696d2000
+20891 <... close resumed>)              = 0
+20892 close(3 <unfinished ...>
+20891 openat(AT_FDCWD, "/usr/local/lib64/libstdc++.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+20892 <... close resumed>)              = 0
+20891 <... openat resumed>)             = 3
+20892 openat(AT_FDCWD, "/usr/local/lib64/libstdc++.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+20891 read(3,  <unfinished ...>
+20892 <... openat resumed>)             = 3
+20891 <... read resumed>"\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+20892 read(3,  <unfinished ...>
+20891 newfstatat(3, "",  <unfinished ...>
+20892 <... read resumed>"\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+20891 <... newfstatat resumed>{st_mode=S_IFREG|0755, st_size=2530008, ...}, AT_EMPTY_PATH) = 0
+20892 newfstatat(3, "",  <unfinished ...>
+20891 mmap(NULL, 2543808, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0 <unfinished ...>
+20892 <... newfstatat resumed>{st_mode=S_IFREG|0755, st_size=2530008, ...}, AT_EMPTY_PATH) = 0
+20891 <... mmap resumed>)               = 0x7efe38600000
+20892 mmap(NULL, 2543808, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0 <unfinished ...>
+20891 mmap(0x7efe386a5000, 1216512, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xa5000 <unfinished ...>
+20892 <... mmap resumed>)               = 0x7f5069400000
+20891 <... mmap resumed>)               = 0x7efe386a5000
+20892 mmap(0x7f50694a5000, 1216512, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xa5000 <unfinished ...>
+20891 mmap(0x7efe387ce000, 581632, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1ce000 <unfinished ...>
+20892 <... mmap resumed>)               = 0x7f50694a5000
+20891 <... mmap resumed>)               = 0x7efe387ce000
+20892 mmap(0x7f50695ce000, 581632, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1ce000 <unfinished ...>
+20891 mmap(0x7efe3885c000, 57344, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x25c000 <unfinished ...>
+20892 <... mmap resumed>)               = 0x7f50695ce000
+20891 <... mmap resumed>)               = 0x7efe3885c000
+20892 mmap(0x7f506965c000, 57344, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x25c000 <unfinished ...>
+20891 mmap(0x7efe3886a000, 12480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+20892 <... mmap resumed>)               = 0x7f506965c000
+20891 <... mmap resumed>)               = 0x7efe3886a000
+20892 mmap(0x7f506966a000, 12480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+20891 close(3 <unfinished ...>
+20892 <... mmap resumed>)               = 0x7f506966a000
+20891 <... close resumed>)              = 0
+20892 close(3 <unfinished ...>
+20891 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+20892 <... close resumed>)              = 0
+20891 <... openat resumed>)             = 3
+20892 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+20891 read(3,  <unfinished ...>
+20892 <... openat resumed>)             = 3
+20891 <... read resumed>"\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+20892 read(3,  <unfinished ...>
+20891 newfstatat(3, "",  <unfinished ...>
+20892 <... read resumed>"\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+20891 <... newfstatat resumed>{st_mode=S_IFREG|0644, st_size=911904, ...}, AT_EMPTY_PATH) = 0
+20892 newfstatat(3, "",  <unfinished ...>
+20891 mmap(NULL, 913680, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0 <unfinished ...>
+20892 <... newfstatat resumed>{st_mode=S_IFREG|0644, st_size=911904, ...}, AT_EMPTY_PATH) = 0
+20891 <... mmap resumed>)               = 0x7efe38940000
+20892 mmap(NULL, 913680, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0 <unfinished ...>
+20891 mmap(0x7efe38950000, 475136, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x10000 <unfinished ...>
+20892 <... mmap resumed>)               = 0x7f5069320000
+20891 <... mmap resumed>)               = 0x7efe38950000
+20892 mmap(0x7f5069330000, 475136, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x10000 <unfinished ...>
+20891 mmap(0x7efe389c4000, 368640, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x84000 <unfinished ...>
+20892 <... mmap resumed>)               = 0x7f5069330000
+20891 <... mmap resumed>)               = 0x7efe389c4000
+20892 mmap(0x7f50693a4000, 368640, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x84000 <unfinished ...>
+20891 mmap(0x7efe38a1e000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xdd000 <unfinished ...>
+20892 <... mmap resumed>)               = 0x7f50693a4000
+20891 <... mmap resumed>)               = 0x7efe38a1e000
+20892 mmap(0x7f50693fe000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xdd000 <unfinished ...>
+20891 close(3 <unfinished ...>
+20892 <... mmap resumed>)               = 0x7f50693fe000
+20891 <... close resumed>)              = 0
+20892 close(3 <unfinished ...>
+20891 openat(AT_FDCWD, "/usr/local/lib64/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+20891 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+20891 newfstatat(3, "",  <unfinished ...>
+20892 <... close resumed>)              = 0
+20891 <... newfstatat resumed>{st_mode=S_IFREG|0644, st_size=906528, ...}, AT_EMPTY_PATH) = 0
+20892 openat(AT_FDCWD, "/usr/local/lib64/libgcc_s.so.1", O_RDONLY|O_CLOEXEC <unfinished ...>
+20891 mmap(NULL, 181160, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0 <unfinished ...>
+20892 <... openat resumed>)             = 3
+20891 <... mmap resumed>)               = 0x7efe38913000
+20892 read(3,  <unfinished ...>
+20891 mmap(0x7efe38917000, 143360, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000 <unfinished ...>
+20892 <... read resumed>"\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+20891 <... mmap resumed>)               = 0x7efe38917000
+20892 newfstatat(3, "",  <unfinished ...>
+20891 mmap(0x7efe3893a000, 16384, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x27000 <unfinished ...>
+20892 <... newfstatat resumed>{st_mode=S_IFREG|0644, st_size=906528, ...}, AT_EMPTY_PATH) = 0
+20891 <... mmap resumed>)               = 0x7efe3893a000
+20892 mmap(NULL, 181160, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0 <unfinished ...>
+20891 mmap(0x7efe3893e000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2b000 <unfinished ...>
+20892 <... mmap resumed>)               = 0x7f50696a5000
+20891 <... mmap resumed>)               = 0x7efe3893e000
+20892 mmap(0x7f50696a9000, 143360, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000 <unfinished ...>
+20891 close(3 <unfinished ...>
+20892 <... mmap resumed>)               = 0x7f50696a9000
+20891 <... close resumed>)              = 0
+20892 mmap(0x7f50696cc000, 16384, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x27000 <unfinished ...>
+20891 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+20892 <... mmap resumed>)               = 0x7f50696cc000
+20891 <... openat resumed>)             = 3
+20892 mmap(0x7f50696d0000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2b000 <unfinished ...>
+20891 read(3,  <unfinished ...>
+20892 <... mmap resumed>)               = 0x7f50696d0000
+20891 <... read resumed>"\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\20t\2\0\0\0\0\0"..., 832) = 832
+20892 close(3 <unfinished ...>
+20891 pread64(3,  <unfinished ...>
+20892 <... close resumed>)              = 0
+20892 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+20891 <... pread64 resumed>"\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+20892 <... openat resumed>)             = 3
+20892 read(3,  <unfinished ...>
+20891 newfstatat(3, "",  <unfinished ...>
+20892 <... read resumed>"\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\20t\2\0\0\0\0\0"..., 832) = 832
+20891 <... newfstatat resumed>{st_mode=S_IFREG|0755, st_size=1926232, ...}, AT_EMPTY_PATH) = 0
+20892 pread64(3,  <unfinished ...>
+20891 pread64(3,  <unfinished ...>
+20892 <... pread64 resumed>"\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+20891 <... pread64 resumed>"\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+20892 newfstatat(3, "",  <unfinished ...>
+20891 mmap(NULL, 1974096, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0 <unfinished ...>
+20892 <... newfstatat resumed>{st_mode=S_IFREG|0755, st_size=1926232, ...}, AT_EMPTY_PATH) = 0
+20891 <... mmap resumed>)               = 0x7efe3841e000
+20892 pread64(3,  <unfinished ...>
+20891 mmap(0x7efe38444000, 1400832, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x26000 <unfinished ...>
+20892 <... pread64 resumed>"\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+20891 <... mmap resumed>)               = 0x7efe38444000
+20892 mmap(NULL, 1974096, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0 <unfinished ...>
+20891 mmap(0x7efe3859a000, 339968, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x17c000 <unfinished ...>
+20892 <... mmap resumed>)               = 0x7f506913e000
+20891 <... mmap resumed>)               = 0x7efe3859a000
+20892 mmap(0x7f5069164000, 1400832, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x26000 <unfinished ...>
+20891 mmap(0x7efe385ed000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1cf000 <unfinished ...>
+20892 <... mmap resumed>)               = 0x7f5069164000
+20891 <... mmap resumed>)               = 0x7efe385ed000
+20892 mmap(0x7f50692ba000, 339968, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x17c000 <unfinished ...>
+20891 mmap(0x7efe385f3000, 53072, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+20892 <... mmap resumed>)               = 0x7f50692ba000
+20891 <... mmap resumed>)               = 0x7efe385f3000
+20892 mmap(0x7f506930d000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1cf000 <unfinished ...>
+20891 close(3 <unfinished ...>
+20892 <... mmap resumed>)               = 0x7f506930d000
+20891 <... close resumed>)              = 0
+20892 mmap(0x7f5069313000, 53072, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+20891 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+20892 <... mmap resumed>)               = 0x7f5069313000
+20891 <... mmap resumed>)               = 0x7efe38911000
+20892 close(3 <unfinished ...>
+20891 arch_prctl(ARCH_SET_FS, 0x7efe38912480 <unfinished ...>
+20892 <... close resumed>)              = 0
+20891 <... arch_prctl resumed>)         = 0
+20892 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+20891 set_tid_address(0x7efe38912750 <unfinished ...>
+20892 <... mmap resumed>)               = 0x7f50696a3000
+20891 <... set_tid_address resumed>)    = 20891
+20892 arch_prctl(ARCH_SET_FS, 0x7f50696a4480 <unfinished ...>
+20891 set_robust_list(0x7efe38912760, 24 <unfinished ...>
+20892 <... arch_prctl resumed>)         = 0
+20891 <... set_robust_list resumed>)    = 0
+20892 set_tid_address(0x7f50696a4750 <unfinished ...>
+20891 rseq(0x7efe38912da0, 0x20, 0, 0x53053053 <unfinished ...>
+20892 <... set_tid_address resumed>)    = 20892
+20891 <... rseq resumed>)               = 0
+20892 set_robust_list(0x7f50696a4760, 24) = 0
+20892 rseq(0x7f50696a4da0, 0x20, 0, 0x53053053 <unfinished ...>
+20891 mprotect(0x7efe385ed000, 16384, PROT_READ <unfinished ...>
+20892 <... rseq resumed>)               = 0
+20891 <... mprotect resumed>)           = 0
+20892 mprotect(0x7f506930d000, 16384, PROT_READ <unfinished ...>
+20891 mprotect(0x7efe3893e000, 4096, PROT_READ <unfinished ...>
+20892 <... mprotect resumed>)           = 0
+20891 <... mprotect resumed>)           = 0
+20892 mprotect(0x7f50696d0000, 4096, PROT_READ <unfinished ...>
+20891 mprotect(0x7efe38a1e000, 4096, PROT_READ <unfinished ...>
+20892 <... mprotect resumed>)           = 0
+20891 <... mprotect resumed>)           = 0
+20892 mprotect(0x7f50693fe000, 4096, PROT_READ) = 0
+20891 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+20892 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+20891 <... mmap resumed>)               = 0x7efe3890f000
+20892 <... mmap resumed>)               = 0x7f50696a1000
+20892 mprotect(0x7f506965c000, 45056, PROT_READ <unfinished ...>
+20891 mprotect(0x7efe3885c000, 45056, PROT_READ <unfinished ...>
+20892 <... mprotect resumed>)           = 0
+20891 <... mprotect resumed>)           = 0
+20892 mprotect(0x405000, 4096, PROT_READ <unfinished ...>
+20891 mprotect(0x405000, 4096, PROT_READ <unfinished ...>
+20892 <... mprotect resumed>)           = 0
+20891 <... mprotect resumed>)           = 0
+20892 mprotect(0x7f5069714000, 8192, PROT_READ <unfinished ...>
+20891 mprotect(0x7efe38a62000, 8192, PROT_READ <unfinished ...>
+20892 <... mprotect resumed>)           = 0
+20891 <... mprotect resumed>)           = 0
+20892 prlimit64(0, RLIMIT_STACK, NULL,  <unfinished ...>
+20891 prlimit64(0, RLIMIT_STACK, NULL,  <unfinished ...>
+20892 <... prlimit64 resumed>{rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+20891 <... prlimit64 resumed>{rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+20892 munmap(0x7f50696d2000, 33091 <unfinished ...>
+20891 munmap(0x7efe38a20000, 33091 <unfinished ...>
+20892 <... munmap resumed>)             = 0
+20891 <... munmap resumed>)             = 0
+20892 futex(0x7f506966a73c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+20891 futex(0x7efe3886a73c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+20892 getrandom("\x19\x25\x5a\x2b\x9d\xa3\xe2\x88", 8, GRND_NONBLOCK) = 8
+20892 brk(NULL <unfinished ...>
+20891 getrandom( <unfinished ...>
+20892 <... brk resumed>)                = 0x12d86000
+20891 <... getrandom resumed>"\x97\x72\xd6\xc2\x73\x46\x66\x61", 8, GRND_NONBLOCK) = 8
+20892 brk(0x12da7000 <unfinished ...>
+20891 brk(NULL <unfinished ...>
+20892 <... brk resumed>)                = 0x12da7000
+20891 <... brk resumed>)                = 0x1e51e000
+20892 dup2(8, 1 <unfinished ...>
+20891 brk(0x1e53f000 <unfinished ...>
+20892 <... dup2 resumed>)               = 1
+20891 <... brk resumed>)                = 0x1e53f000
+20892 close(8 <unfinished ...>
+20891 dup2(7, 1 <unfinished ...>
+20892 <... close resumed>)              = 0
+20891 <... dup2 resumed>)               = 1
+20892 newfstatat(0, "",  <unfinished ...>
+20891 close(7 <unfinished ...>
+20892 <... newfstatat resumed>{st_mode=S_IFIFO|0600, st_size=0, ...}, AT_EMPTY_PATH) = 0
+20892 read(0,  <unfinished ...>
+20891 <... close resumed>)              = 0
+20891 newfstatat(0, "", {st_mode=S_IFIFO|0600, st_size=0, ...}, AT_EMPTY_PATH) = 0
+20891 read(0,  <unfinished ...>
+20860 <... read resumed>"FHDSJKHFGKSDJHGKJSDHKJGHJGKD\n", 1024) = 29
+20860 write(6, "FHDSJKHFGKSDJHGKJSDHKJGHJGKD\n", 29) = 29
+20892 <... read resumed>"FHDSJKHFGKSDJHGKJSDHKJGHJGKD\n", 4096) = 29
+20860 read(0,  <unfinished ...>
+20892 newfstatat(1, "", {st_mode=S_IFREG|0600, st_size=0, ...}, AT_EMPTY_PATH) = 0
+20892 write(1, "[child 8] FHDSJKHFGKSDJHGKJSDHKJ"..., 39) = 39
+20892 read(0,  <unfinished ...>
+20860 <... read resumed>"FHHHHFAAAAAA\n", 1024) = 13
+20860 write(6, "FHHHHFAAAAAA\n", 13)    = 13
+20892 <... read resumed>"FHHHHFAAAAAA\n", 4096) = 13
+20860 read(0,  <unfinished ...>
+20892 write(1, "[child 8] FHHHHF\n", 17) = 17
+20892 read(0,  <unfinished ...>
+20860 <... read resumed>"HJKHKJKH\n", 1024) = 9
+20860 write(4, "HJKHKJKH\n", 9)         = 9
+20891 <... read resumed>"HJKHKJKH\n", 4096) = 9
+20860 read(0,  <unfinished ...>
+20891 newfstatat(1, "", {st_mode=S_IFREG|S_ISGID|S_ISVTX|0700, st_size=0, ...}, AT_EMPTY_PATH) = 0
+20891 write(1, "[child 7] HJKHKJKH\n", 19) = 19
+20891 read(0,  <unfinished ...>
+20860 <... read resumed>"HHH\n", 1024)  = 4
+20860 write(4, "HHH\n", 4)              = 4
+20891 <... read resumed>"HHH\n", 4096)  = 4
+20860 read(0,  <unfinished ...>
+20891 write(1, "[child 7] HHH\n", 14)   = 14
+20891 read(0,  <unfinished ...>
+20860 <... read resumed>"AAA\n", 1024)  = 4
+20860 write(4, "AAA\n", 4)              = 4
+20891 <... read resumed>"AAA\n", 4096)  = 4
+20860 read(0,  <unfinished ...>
+20891 write(1, "[child 7] \n", 11)      = 11
+20891 read(0,  <unfinished ...>
+20860 <... read resumed>"IHUIhiuhuihg\n", 1024) = 13
+20860 write(6, "IHUIhiuhuihg\n", 13)    = 13
+20860 read(0,  <unfinished ...>
+20892 <... read resumed>"IHUIhiuhuihg\n", 4096) = 13
+20892 write(1, "[child 8] Hhhhg\n", 16) = 16
+20892 read(0,  <unfinished ...>
+20860 <... read resumed>"ffiauifausi\n", 1024) = 12
+20860 write(6, "ffiauifausi\n", 12)     = 12
+20892 <... read resumed>"ffiauifausi\n", 4096) = 12
+20860 read(0,  <unfinished ...>
+20892 write(1, "[child 8] fffs\n", 15)  = 15
+20892 read(0,  <unfinished ...>
+20860 <... read resumed>"fdsf\n", 1024) = 5
+20860 write(4, "fdsf\n", 5)             = 5
+20860 read(0,  <unfinished ...>
+20891 <... read resumed>"fdsf\n", 4096) = 5
+20891 write(1, "[child 7] fdsf\n", 15)  = 15
+20891 read(0,  <unfinished ...>
+20860 <... read resumed>"", 1024)       = 0
+20860 close(4)                          = 0
+20891 <... read resumed>"", 4096)       = 0
+20860 close(6)                          = 0
+20860 wait4(20891,  <unfinished ...>
+20892 <... read resumed>"", 4096)       = 0
+20891 exit_group(0 <unfinished ...>
+20892 exit_group(0 <unfinished ...>
+20891 <... exit_group resumed>)         = ?
+20892 <... exit_group resumed>)         = ?
+20891 +++ exited with 0 +++
+20860 <... wait4 resumed>NULL, 0, NULL) = 20891
+20892 +++ exited with 0 +++
+20860 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=20891, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+20860 wait4(20892, NULL, 0, NULL)       = 20892
+20860 close(7)                          = 0
+20860 close(8)                          = 0
+20860 exit_group(0)                     = ?
+20860 +++ exited with 0 +++
