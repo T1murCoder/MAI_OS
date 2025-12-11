@@ -3,6 +3,7 @@
 #include <string.h>
 #include <dlfcn.h>
 #include <stdbool.h>
+#include <sys/types.h>
 
 #define LIB_V1 "./my_lib_1.so"
 #define LIB_V2 "./my_lib_2.so"
@@ -17,7 +18,6 @@ typedef struct {
     void* handle;
     DerivativeFunc derivative_func;
     GCFFunc gcf_func;
-    const char* current_lib_path;
 } DynamicLibrary;
 
 int load_library(DynamicLibrary* lib, const char* lib_path) {
@@ -25,6 +25,10 @@ int load_library(DynamicLibrary* lib, const char* lib_path) {
         if(dlclose(lib->handle) != 0) {
             fprintf(stderr, "Ошибка закрытия библиотеки: %s\n", dlerror());
         }
+        lib->handle = NULL;
+        lib->derivative_func = NULL;
+        lib->gcf_func = NULL;
+
     }
 
     lib->handle = dlopen(lib_path, RTLD_LAZY);
@@ -46,7 +50,6 @@ int load_library(DynamicLibrary* lib, const char* lib_path) {
         return -1;
     }
 
-    lib->current_lib_path = lib_path;
     printf("Библиотека успешно загружена: %s\n", lib_path);
     return 0;
 }
@@ -55,6 +58,8 @@ void cleanup_library(DynamicLibrary* lib) {
     if (lib->handle != NULL) {
         dlclose(lib->handle);
         lib->handle = NULL;
+        lib->derivative_func = NULL;
+        lib->gcf_func = NULL;
     }
 }
 
@@ -68,7 +73,7 @@ int main() {
 
     char* line = NULL;
     size_t len = 0;
-    size_t read;
+    ssize_t read;
     bool use_first_lib = true;
 
     printf("Введите команды (0, 1 A deltaX, 2 A B):\n");
@@ -112,7 +117,7 @@ int main() {
             Float result = lib.derivative_func(A, deltaX);
             printf("Производная: %f\n", result);
         } else if (line[0] == '2') {
-            if (lib.derivative_func == NULL) {
+            if (lib.gcf_func == NULL) {
                 fprintf(stderr, "Ошибка: Функция GCF не загружена\n");
                 continue;
             }
